@@ -85,7 +85,8 @@ header button:hover {
     margin-bottom: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    gap: 40px;
+    /* Mais espaço entre os cards */
     justify-content: center;
 }
 
@@ -101,10 +102,14 @@ header button:hover {
     width: 100%;
     aspect-ratio: 1 / 1;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transição suave */
 }
 
 .restaurant:hover {
     transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Sombra maior ao hover */
 }
 
 .restaurant img {
@@ -137,9 +142,7 @@ h2 {
 
 footer {
     display: grid;
-    /* Alterado para grid */
     grid-template-columns: 1fr 1fr 1fr;
-    /* Definindo três colunas */
     align-items: center;
     padding: 20px 40px;
     background-color: #C4541D;
@@ -171,19 +174,26 @@ footer #logo {
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    grid-column: 1 / -1;
+    /* Ocupa toda a largura do footer */
 }
 
 #texto2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
+    gap: 10px;
+    /* Mais espaço entre os elementos */
     width: 100%;
+    max-width: 600px;
+    /* Limita a largura para melhor leitura */
 }
 
 #texto2 h3 {
     font-size: 23px;
     color: #f5f5f5;
+    margin-bottom: 10px;
+    /* Espaço abaixo do título */
 }
 
 #search2 {
@@ -192,6 +202,8 @@ footer #logo {
     border-radius: 5px;
     border: 1px solid #888;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    /* Espaço abaixo da barra de pesquisa */
 }
 
 .bottom-footer {
@@ -201,6 +213,8 @@ footer #logo {
     font-size: 14px;
     border-top: 1px solid #2422224d;
     width: 100%;
+    grid-column: 1 / -1;
+    /* Ocupa toda a largura do footer */
 }
 
 #copyright {
@@ -254,8 +268,6 @@ footer #logo {
     footer {
         grid-template-columns: 1fr;
         /* Uma coluna em dispositivos móveis */
-        flex-direction: column;
-        align-items: center;
         gap: 10px;
         min-height: auto;
     }
@@ -279,6 +291,10 @@ footer #logo {
 
     #search2 {
         width: 100%;
+    }
+
+    .bottom-footer {
+        padding: 10px;
     }
 }
 
